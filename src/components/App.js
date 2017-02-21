@@ -3,7 +3,7 @@ import Main from './Main';
 import Login from './Login';
 
 import {
-  BrowserRouter as Router,
+    BrowserRouter as Router,
 } from 'react-router-dom'
 
 const propTypes = {
@@ -22,7 +22,7 @@ class App extends Component {
 
     render() {
         return(
-            <Router>
+            <Router onUpdate={() => window.scrollTo(0, 0)} >
                 <div>
                     <Main/>
                 </div>

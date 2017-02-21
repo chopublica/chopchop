@@ -5,6 +5,7 @@ import Rooms from './Rooms';
 import Room from './Room';
 import PinList from './PinList';
 import MyPage from './MyPage';
+import Review from './Review';
 import NotFound from './NotFound';
 import Nav from './Nav';
 import Profile from './Profile';
@@ -12,7 +13,7 @@ import {
   Route,
   Link
 } from 'react-router-dom'
-import { Grid } from 'semantic-ui-react'
+import { Grid, Container } from 'semantic-ui-react'
 
 
 const propTypes = {
@@ -30,19 +31,18 @@ class Main extends Component {
     render() {
         return(
             <div>
-                <Grid centered doubling columns={2}>
-                    <Grid.Column>
+                <Container text>
                         <Nav/>
 
                         <Route exact path="/chopchop/" component={Home}/>
-                        <Route path="/chopchop/Rooms" component={Rooms}/>
-                        <Route path="/chopchop/PinList" component={PinList}/>
-                        <Route path="/chopchop/MyPage" component={MyPage}/>
-                        <Route path="/chopchop/Rooms/:roomId" component={Room}/>
-                        <Route path="/chopchop/Profile/:profileId" component={Profile}/>
+                        <Route path="/chopchop/rooms" component={Rooms}/>
+                        <Route path="/chopchop/pinList" component={PinList}/>
+                        <Route path="/chopchop/myPage" component={MyPage}/>
+                        <Route path="/chopchop/rooms/:roomId" component={Room}/>
+                        <Route path="/chopchop/reviews/:reviewId" component={Review}/>
+                        <Route path="/chopchop/profile/:profileId" component={Profile}/>
 
-                    </Grid.Column>
-                </Grid>
+                </Container>
             </div>
         );
     }

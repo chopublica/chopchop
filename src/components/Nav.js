@@ -15,7 +15,7 @@ class Nav extends Component {
     constructor(props) {
         super(props);
     }
-    state = { activeItem: 'home' }
+    state = { activeItem: 'Home' }
 
     handleItemClick = (e, { name }) => this.setState({ activeItem: name })
 
@@ -25,17 +25,17 @@ class Nav extends Component {
 
         return(
             <Segment inverted>
-                <Menu inverted>
+                <Menu inverted pointing secondary>
                     <Link to="/chopchop/">
                         <Menu.Item name='Home' active={activeItem === 'Home'} onClick={this.handleItemClick} />
                     </Link>
-                    <Link to="/chopchop/Rooms">
+                    <Link to="/chopchop/rooms">
                         <Menu.Item name='Rooms' active={activeItem === 'Rooms'} onClick={this.handleItemClick} />
                     </Link>
-                    <Link to="/chopchop/PinList">
+                    <Link to="/chopchop/pinList">
                         <Menu.Item name='PinList' active={activeItem === 'PinList'} onClick={this.handleItemClick} />
                     </Link>
-                    <Link to="/chopchop/MyPage">
+                    <Link to="/chopchop/myPage">
                         <Menu.Item name='MyPage' active={activeItem === 'MyPage'} onClick={this.handleItemClick} />
                     </Link>
                 </Menu>
