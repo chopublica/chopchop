@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { Header, Image, Grid, Segment, Icon, Card } from 'semantic-ui-react'
-
+import Counter from './Counter';
 import {
     Link
 } from 'react-router-dom'
@@ -21,6 +21,7 @@ class Home extends Component {
         const square = { width: 175, height: 175 }
         return(
             <div>
+                <Counter/>
                 <Grid centered>
                     <Grid.Column width='8'>
                         <Image src='http://semantic-ui.com/images/wireframe/image.png' size='medium' shape='rounded' centered />

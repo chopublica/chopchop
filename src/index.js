@@ -4,36 +4,22 @@ import App from './components/App';
 import './index.css';
 // import 'semantic-ui-css/semantic.min.css';
 
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
+import createSagaMiddleware from 'redux-saga';
 import reducers from './reducers';
+import rootSaga from './sagas';
 
 import {Provider} from 'react-redux';
 
-const store = createStore(reducers);
+const sagaMiddleware = createSagaMiddleware();
 
-class Home extends React.Component {
-    render() {
-        return (
-            <h2>Hey, I am HOME!</h2>
-        );
-    }
-}
+const middleware = [sagaMiddleware];
 
-class About extends React.Component {
-    render() {
-        return (
-            <h2>Hey, I am ABOUT!</h2>
-        );
-    }
-}
-
-class Articles extends React.Component {
-    render() {
-        return (
-            <h2>Hey, I am ARTCILES!</h2>
-        );
-    }
-}
+const store = createStore(
+  reducers,
+  applyMiddleware(...middleware),
+);
+sagaMiddleware.run(rootSaga);
 
 ReactDOM.render(
     <Provider store={store}>

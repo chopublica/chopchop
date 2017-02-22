@@ -18,3 +18,15 @@ export function setColor(color) {
 		color
 	};
 }
+
+export function test1() {
+	return{
+		type: "TEST1"
+	};
+}
+
+export function test2() {
+	return{
+		type: "TEST2"
+	};
+}

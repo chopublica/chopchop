@@ -43,6 +43,8 @@ class Counter extends Component {
 					onSubtract={this.props.handleDecrement}
 					onRandomizeColor={this.setRandomColor}
 				/>
+      <button onClick={this.props.test1}>asdf</button>
+      <button onClick={this.props.test2}>asdf2</button>
             </div>
         );
     }
@@ -60,7 +62,9 @@ const mapDispatchToProps = (dispatch) => {
 	return {
 		handleIncrement: () => { dispatch(actions.increment())},
 		handleDecrement: () => { dispatch(actions.decrement())},
-		handleSetColor: (color) => { dispatch(actions.setColor(color))}
+		handleSetColor: (color) => { dispatch(actions.setColor(color))},
+    test1: () => { dispatch(actions.test1())},
+    test2: () => {dispatch(actions.test2())},
 	};
 }
 
