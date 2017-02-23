@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { Header, Grid, Image } from 'semantic-ui-react';
-import GoogleMap from './GoogleMap';
+import GoogleMap from '../GoogleMap/GoogleMap';
 const propTypes = {
 
 };

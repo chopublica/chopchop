@@ -24,7 +24,6 @@ function* test1(){
 }
 
 export default function* test(){
-  console.log("?")
-  // yield fork(test1);
+  yield fork(test1);
   yield fork(test2);
 }

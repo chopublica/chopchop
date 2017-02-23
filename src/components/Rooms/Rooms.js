@@ -20,7 +20,6 @@ class Rooms extends Component {
     render() {
         return(
             <div>
-                <Route exact path={this.props.match.url} render={() => (
                     <div>
                         <Header as='h3' dividing>
                             즐겨찾기
@@ -29,12 +28,12 @@ class Rooms extends Component {
                         <Grid celled>
                             <Grid.Row>
                                 <Grid.Column width={3}>
-                                    <Link to={`${this.props.match.url}/1`}>
+                                    <Link to={`/chopchop/rooms/1`}>
                                         <Image src='http://semantic-ui.com/images/wireframe/image.png' />
                                     </Link>
                                 </Grid.Column>
                                 <Grid.Column width={13}>
-                                    <Link to={`${this.props.match.url}/1`}>
+                                    <Link to={`/chopchop/rooms/1`}>
                                         <Image src='http://semantic-ui.com/images/wireframe/centered-paragraph.png' />
                                     </Link>
                                 </Grid.Column>
@@ -42,12 +41,12 @@ class Rooms extends Component {
 
                             <Grid.Row>
                                 <Grid.Column width={3}>
-                                    <Link to={`${this.props.match.url}/1`}>
+                                    <Link to={`/chopchop/rooms/1`}>
                                         <Image src='http://semantic-ui.com/images/wireframe/image.png' />
                                     </Link>
                                 </Grid.Column>
                                 <Grid.Column width={13}>
-                                    <Link to={`${this.props.match.url}/1`}>
+                                    <Link to={`/chopchop/rooms/1`}>
                                         <Image src='http://semantic-ui.com/images/wireframe/centered-paragraph.png' />
                                     </Link>
                                 </Grid.Column>
@@ -62,31 +61,30 @@ class Rooms extends Component {
                         <Grid celled>
                             <Grid.Row>
                                 <Grid.Column width={3}>
-                                    <Link to={`${this.props.match.url}/1`}>
+                                    <Link to={`/chopchop/rooms/1`}>
                                         <Image src='http://semantic-ui.com/images/wireframe/image.png' />
                                     </Link>
                                 </Grid.Column>
                                 <Grid.Column width={13}>
-                                    <Link to={`${this.props.match.url}/1`}>
+                                    <Link to={`/chopchop/rooms/1`}>
                                         <Image src='http://semantic-ui.com/images/wireframe/centered-paragraph.png' />
                                     </Link>
                                 </Grid.Column>
                             </Grid.Row>
                             <Grid.Row>
                                 <Grid.Column width={3}>
-                                    <Link to={`${this.props.match.url}/1`}>
+                                    <Link to={`/chopchop/rooms/1`}>
                                         <Image src='http://semantic-ui.com/images/wireframe/image.png' />
                                     </Link>
                                 </Grid.Column>
                                 <Grid.Column width={13}>
-                                    <Link to={`${this.props.match.url}/1`}>
+                                    <Link to={`/chopchop/rooms/1`}>
                                         <Image src='http://semantic-ui.com/images/wireframe/centered-paragraph.png' />
                                     </Link>
                                 </Grid.Column>
                             </Grid.Row>
                         </Grid>
                     </div>
-                )}/>
             </div>
 
         );

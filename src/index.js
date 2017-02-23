@@ -1,15 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
-import './index.css';
-// import 'semantic-ui-css/semantic.min.css';
-
+import {Provider} from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import reducers from './reducers';
 import rootSaga from './sagas';
-
-import {Provider} from 'react-redux';
+import App from './App';
+import './index.css';
 
 const sagaMiddleware = createSagaMiddleware();
 
@@ -19,6 +16,7 @@ const store = createStore(
   reducers,
   applyMiddleware(...middleware),
 );
+
 sagaMiddleware.run(rootSaga);
 
 ReactDOM.render(
